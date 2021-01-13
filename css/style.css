@@ -1,0 +1,100 @@
+:root{
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+html{
+  font-family: 'Raleway', sans-serif;
+}
+body{
+  background-color: var(--red);
+  background-image: url(../images/bg-intro-mobile.png);
+}
+@media screen and (min-width: 51rem){
+  body{
+    position: relative;
+    height: calc(100vh - 10rem);
+    background-image: url(../images/bg-intro-desktop.png);
+  }
+}
+@media screen and (min-width: 68rem){
+  body{
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh);
+  }
+}
+/* -------------------- ESTILOS -------------------- */
+@media screen and (min-width: 68rem){
+  .content{
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 68rem){
+  .header-section{
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-title > h2{
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+.main-content-title{
+  background-color: var(--blue);
+  border-radius: 10px;
+  box-shadow: 0px 7px 0px 0px rgba(0,0,0,0.11);
+}
+.form{
+  border-radius: 5px;
+  box-shadow: 0px 7px 0px 0px rgba(0,0,0,0.11);
+}
+.form > .container > input{
+  border: thin solid var(--grayish-blue);
+  border-radius: 5px;
+  outline: none;
+}
+.form > .container > input:not([type="submit"])::placeholder{
+  color: var(--dark-blue);
+}
+.form > .container > input[type="submit"]{
+  border: none;
+  background-color: var(--green);
+  box-shadow: 1px 3px 0px 0px hsl(154, 53%, 40%);
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.form > .container > input[type="submit"]:hover{
+  opacity: .7;
+}
+.form > .container > p{
+  font-size: 0.7rem;
+  color: var(--grayish-blue);
+}
+.form > .container > p > a{
+  color: var(--red);
+  opacity: 1;
+}
+@media screen and (min-width: 68rem){
+  .main-content{
+    flex: 1;
+  }
+}
+/* -------------------- FOOTER -------------------- */
+@media screen and (min-width: 51rem){
+  footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+/* -------------------- ATTRIBUTION -------------------- */
+.attribution{
+  background-color: var(--grayish-blue);
+}
